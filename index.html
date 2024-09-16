@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK Flytning - Anmodning om Tilbud</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin: 10px 0 5px;
+    }
+    input[type="text"], input[type="date"], select, textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+    .contact-info {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>MK Flytning</h1>
+    <h2>Anmodning om Tilbud</h2>
+    <form action="confirmation.html" method="POST">
+      <label for="nom">Navn:</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="telefon">Telefon:</label>
+      <input type="text" id="telefon" name="telefon" required>
+
+      <label for="adresse_depart">Fraflytte adresse:</label>
+      <input type="text" id="adresse_depart" name="adresse_depart" required>
+
+      <label for="adresse_arrivee">Tilflytte adresse:</label>
+      <input type="text" id="adresse_arrivee" name="adresse_arrivee" required>
+
+      <label for="taille">Størrelse på Lejlighed/Hus (m²):</label>
+      <select id="taille" name="taille" required>
+        <option value="10">10 m²</option>
+        <option value="20">20 m²</option>
+        <option value="30">30 m²</option>
+        <option value="40">40 m²</option>
+        <option value="50">50 m²</option>
+        <option value="60">60 m²</option>
+        <option value="70">70 m²</option>
+        <option value="80">80 m²</option>
+        <option value="90">90 m²</option>
+        <option value="100">100 m²</option>
+      </select>
+
+      <label for="date_demenagement">Dato for flytning:</label>
+      <input type="date" id="date_demenagement" name="date_demenagement" required>
+
+      <label for="demenagement">Yderligere Information:</label>
+      <textarea id="demenagement" name="demenagement" rows="4" required></textarea>
+
+      <input type="submit" value="Send">
+    </form>
+    <p class="contact-info">Kontakt os: 91833497</p>
+  </div>
+</body>
+</html>
