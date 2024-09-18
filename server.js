@@ -30,7 +30,7 @@ app.post('/envoyer', (req, res) => {
         service: 'gmail',
         auth: {
             user: 'mkflytning@gmail.com',
-            pass: 'TON_MOT_DE_PASSE',
+            pass: 'u d u n z q o u x h w b b r a b',
         },
     });
 
