@@ -1,81 +1,41 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demande de devis - MKFlytning</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('images/background.jpg'); /* Chemin vers l'image de fond */
-            background-size: cover;
-            background-position: center;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label, input, textarea {
-            margin-bottom: 10px;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-        }
-        /* Style du logo */
-        .logo {
-            display: block;
-            margin: 0 auto 20px;
-            width: 150px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flyttefirma Form</title>
 </head>
 <body>
-    <div class="container">
-        <img src="images/logo.png" alt="MKFlytning Logo" class="logo"> <!-- Afficher le logo -->
+  <h1>Anmodning om Flyttetilbud</h1>
+  <form action="/envoyer" method="POST">
+    <label for="navn">Navn:</label>
+    <input type="text" id="navn" name="nom" required><br>
 
-        <h1>Demande de devis</h1>
-        <form action="/envoyer" method="POST">
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" required>
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    <label for="telefon">Telefon:</label>
+    <input type="text" id="telefon" name="telefon" required><br>
 
-            <label for="telefon">Téléphone:</label>
-            <input type="text" id="telefon" name="telefon" required>
+    <label for="adresse_afgang">Afgangsadresse:</label>
+    <input type="text" id="adresse_afgang" name="adresse_depart" required><br>
 
-            <label for="adresse_depart">Adresse de départ:</label>
-            <input type="text" id="adresse_depart" name="adresse_depart" required>
+    <label for="adresse_ankomst">Ankomstadresse:</label>
+    <input type="text" id="adresse_ankomst" name="adresse_arrivee" required><br>
 
-            <label for="adresse_arrivee">Adresse d’arrivée:</label>
-            <input type="text" id="adresse_arrivee" name="adresse_arrivee" required>
+    <label for="størrelse">Størrelse (m²):</label>
+    <input type="number" id="størrelse" name="taille" required><br>
 
-            <label for="taille">Taille de l’appartement (en m²):</label>
-            <input type="number" id="taille" name="taille" required>
+    <label for="antal_mænd">Antal Flyttemænd:</label>
+    <input type="number" id="antal_mænd" name="nombre" required><br>
 
-            <label for="nombre">Nombre de déménageurs:</label>
-            <input type="number" id="nombre" name="nombre" required>
+    <label for="dato_flytning">Flyttedato:</label>
+    <input type="date" id="dato_flytning" name="date_demenagement" required><br>
 
-            <label for="date_demenagement">Date de déménagement:</label>
-            <input type="date" id="date_demenagement" name="date_demenagement" required>
+    <label for="flytning_info">Yderligere Oplysninger:</label>
+    <textarea id="flytning_info" name="demenagement"></textarea><br>
 
-            <label for="demenagement">Informations supplémentaires:</label>
-            <textarea id="demenagement" name="demenagement"></textarea>
-
-            <input type="submit" value="Soumettre">
-        </form>
-    </div>
+    <input type="submit" value="Indsend">
+  </form>
 </body>
 </html>
