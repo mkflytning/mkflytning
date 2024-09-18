@@ -1,41 +1,113 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flyttefirma Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Flytning</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header img {
+            width: 150px;
+        }
+
+        h1 {
+            text-align: center;
+            color: orange;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #333;
+            color: white;
+            border: 1px solid orange;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: orange;
+            color: black;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ff9933;
+        }
+    </style>
 </head>
 <body>
-  <h1>Anmodning om Flyttetilbud</h1>
-  <form action="/envoyer" method="POST">
-    <label for="navn">Navn:</label>
-    <input type="text" id="navn" name="nom" required><br>
+    <header>
+        <img src="logo.png" alt="MK Flytning Logo">
+    </header>
+    <div class="container">
+        <h1>Få et tilbud på flytning</h1>
+        <form action="/envoyer" method="POST">
+            <label for="name">Navn</label>
+            <input type="text" id="name" name="nom" required>
 
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-    <label for="telefon">Telefon:</label>
-    <input type="text" id="telefon" name="telefon" required><br>
+            <label for="telefon">Telefon</label>
+            <input type="text" id="telefon" name="telefon" required>
 
-    <label for="adresse_afgang">Afgangsadresse:</label>
-    <input type="text" id="adresse_afgang" name="adresse_depart" required><br>
+            <label for="adresse_depart">Afgangsadresse</label>
+            <input type="text" id="adresse_depart" name="adresse_depart" required>
 
-    <label for="adresse_ankomst">Ankomstadresse:</label>
-    <input type="text" id="adresse_ankomst" name="adresse_arrivee" required><br>
+            <label for="adresse_arrivee">Ankomstadresse</label>
+            <input type="text" id="adresse_arrivee" name="adresse_arrivee" required>
 
-    <label for="størrelse">Størrelse (m²):</label>
-    <input type="number" id="størrelse" name="taille" required><br>
+            <label for="taille">Størrelse af lejlighed (m²)</label>
+            <select id="taille" name="taille" required>
+                <!-- Liste déroulante pour la taille de 10 à 300 m² -->
+                <option value="" disabled selected>Vælg størrelse</option>
+                <!-- Générer des options de 10 à 300 m² -->
+                <script>
+                    for (let i = 10; i <= 300; i += 10) {
+                        document.write(`<option value="${i}">${i} m²</option>`);
+                    }
+                </script>
+            </select>
 
-    <label for="antal_mænd">Antal Flyttemænd:</label>
-    <input type="number" id="antal_mænd" name="nombre" required><br>
+            <label for="nombre">Antal flyttemænd</label>
+            <input type="number" id="nombre" name="nombre" min="1" required>
 
-    <label for="dato_flytning">Flyttedato:</label>
-    <input type="date" id="dato_flytning" name="date_demenagement" required><br>
+            <label for="date_demenagement">Flyttedato</label>
+            <input type="date" id="date_demenagement" name="date_demenagement" required>
 
-    <label for="flytning_info">Yderligere Oplysninger:</label>
-    <textarea id="flytning_info" name="demenagement"></textarea><br>
+            <label for="demenagement">Yderligere oplysninger</label>
+            <textarea id="demenagement" name="demenagement" rows="4"></textarea>
 
-    <input type="submit" value="Indsend">
-  </form>
+            <button type="submit">Send forespørgsel</button>
+        </form>
+    </div>
 </body>
 </html>
