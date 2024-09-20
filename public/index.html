@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Flytning - Velkommen</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .background {
+            background-image: url('background.jpg'); /* Assurez-vous que l'image est disponible */
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .center-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .center-content button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .center-content button:hover {
+            background-color: #ff9933;
+        }
+
+        .phone-number {
+            font-size: 24px;
+            color: orange;
+            display: none;
+            margin-top: 20px;
+        }
+
+        .phone-number a {
+            color: orange;
+            text-decoration: none;
+        }
+
+        .phone-number a:hover {
+            text-decoration: underline;
+        }
+
+        .phone-number img {
+            width: 24px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        /* Styles pour les avis et le formulaire */
+        .reviews-section {
+            background-color: #ffffff;
+            color: black;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .reviews-section h2 {
+            color: orange;
+            margin-bottom: 20px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .stars input[type="radio"] {
+            display: none;
+        }
+
+        .stars label {
+            font-size: 40px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .stars input[type="radio"]:checked ~ label {
+            color: orange;
+        }
+
+        .stars label:hover,
+        .stars label:hover ~ label {
+            color: orange;
+        }
+
+        textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #333;
+            color: white;
+            border: 1px solid orange;
+            border-radius: 5px;
+        }
+
+        button.submit-btn {
+            background-color: orange;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button.submit-btn:hover {
+            background-color: #ff9933;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .review-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: left;
+            color: black;
+            border: 1px solid #ccc;
+        }
+
+        .review-item .stars {
+            justify-content: flex-start;
+        }
+
+        .show-more-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .show-more-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background">
+        <div class="logo">
+            <img src="logo.png" alt="MK Flytning">
+        </div>
+
+        <div class="center-content">
+            <!-- Bouton pour contacter -->
+            <button id="contactButton">Kontakt os</button>
+
+            <!-- Bouton pour rediriger vers un formulaire (peut rester si besoin dans le futur) -->
+            <button onclick="window.location.href='/form.html';">Få et tilbud</button>
+
+            <!-- Numéro de téléphone qui s'affiche après clic -->
+            <div id="phoneSection" class="phone-number">
+                <img src="phone-icon.png" alt="Telefon">
+                <a href="tel:+4591833497">+45 91 83 34 97</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section des avis -->
+    <div class="reviews-section" id="reviews">
+        <h2>Læg en anmeldelse</h2>
+        <div class="stars">
+            <!-- Système d'étoiles -->
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">&#9733;</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">&#9733;</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">&#9733;</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">&#9733;</label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">&#9733;</label>
+        </div>
+
+        <!-- Formulaire pour laisser un commentaire -->
+        <textarea id="review" placeholder="Skriv din anmeldelse her..." rows="5"></textarea>
+        <br>
+        <button class="submit-btn" onclick="submitReview()">Indsend anmeldelse</button>
+    </div>
+
+    <!-- Section pour afficher les avis -->
+    <div class="container">
+        <h2>Seneste anmeldelser</h2>
+        <div id="reviewsList"></div>
+        <button id="showMoreBtn" class="show-more-btn" style="display:none;" onclick="showMoreReviews()">Læs mere</button>
+    </div>
+
+    <script>
+        let allReviews = []; // Variable pour stocker tous les avis
+        let displayedReviewsCount = 0;
+        const reviewsPerPage = 5; // Nombre d'avis à afficher par page
+
+        // Fonction pour soumettre un avis
+        function submitReview() {
+            const stars = document.querySelector('input[name="rating"]:checked');
+            const reviewText = document.getElementById('review').value;
+
+            if (!stars || !reviewText) {
+                alert("Udfyld venligst både stjerner og anmeldelse.");
+                return;
+            }
+
+            // Nouvel avis
+            const newReview = {
+                stars: stars.value,
+                review: reviewText
+            };
+
+            // Ajouter l'avis à la liste des avis
+            allReviews.unshift(newReview); // On ajoute en tête pour que le dernier avis soit le premier affiché
+            displayedReviewsCount = 0; // Réinitialiser le compteur de l'affichage
+            updateDisplayedReviews();
+
+            // Réinitialiser le formulaire
+            document.querySelector('input[name="rating"]:checked').checked = false;
+            document.getElementById('review').value = '';
+        }
+
+        // Fonction pour afficher les avis à partir de la liste
+        function updateDisplayedReviews() {
+            const reviewsList = document.getElementById('reviewsList');
+            reviewsList.innerHTML = ''; // On réinitialise la liste avant de ré-afficher
+
+            const toDisplay = allReviews.slice(0, displayedReviewsCount + reviewsPerPage); // On affiche les avis dans la limite définie
+            toDisplay.forEach(displayReview);
+
+            displayedReviewsCount = toDisplay.length;
+
+            // Afficher ou cacher le bouton "Lire plus"
+            if (displayedReviewsCount < allReviews.length) {
+                document.getElementById('showMoreBtn').style.display = 'block';
+            } else {
+                document.getElementById('showMoreBtn').style.display = 'none';
+            }
+        }
+
+        // Fonction pour afficher un avis
+        function displayReview(review) {
+            const reviewsList = document.getElementById('reviewsList');
+            const reviewItem = document.createElement('div');
+            reviewItem.classList.add('review-item');
+
+            // Ajouter les étoiles
+            const stars = document.createElement('div');
+            stars.classList.add('stars');
+            for (let i = 0; i < 5; i++) {
+                const star = document.createElement('label');
+                star.textContent = '★';
+                star.style.color = i < review.stars ? 'orange' : '#ccc';
+                stars.appendChild(star);
+            }
+
+            // Ajouter le texte de l'avis
+            const reviewText = document.createElement('p');
+            reviewText.textContent = review.review;
+
+            // Assembler l'élément avis
+            reviewItem.appendChild(stars);
+            reviewItem.appendChild(reviewText);
+            reviewsList.appendChild(reviewItem);
+        }
+
+        // Fonction pour afficher plus d'avis (par groupes de 5)
+        function showMoreReviews() {
+            updateDisplayedReviews();
+        }
+
+        // Chargement initial des avis simulé
+        document.addEventListener('DOMContentLoaded', function() {
+            // Exemple d'avis déjà existants
+            const existingReviews = [
+                { stars: 5, review: "Fantastisk service!" },
+                { stars: 4, review: "God oplevelse." },
+                { stars: 5, review: "hurtig service, kunne ikke være bedre." },
+                { stars: 5, review: "Super hurtig og venlig!" },
+                { stars: 4, review: "Alt gik fint!" },
+                { stars: 5, review: "God arbejde, er tilfreds." }
+            ];
+
+            allReviews = existingReviews;
+            updateDisplayedReviews(); // Afficher les avis initiaux
+        });
+
+        // Afficher le numéro de téléphone après clic sur le bouton
+        document.getElementById("contactButton").addEventListener("click", function() {
+            document.getElementById("phoneSection").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
