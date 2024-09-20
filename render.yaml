@@ -1,0 +1,11 @@
+version: 1
+services:
+  - type: web
+    name: mkflytning
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
