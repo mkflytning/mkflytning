@@ -163,6 +163,21 @@
         footer .footer-links a {
             margin-right: 15px;
         }
+
+        /* Notice Style */
+        .notice {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6600; /* Couleur orange */
+            color: black; /* Texte en noir */
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Pour s'assurer qu'il est au-dessus des autres éléments */
+            max-width: 300px; /* Largeur maximale */
+            font-size: 14px; /* Taille de police */
+        }
     </style>
 </head>
 <body>
@@ -181,7 +196,7 @@
                     <a href="https://www.facebook.com/profile.php?id=61556330795183" target="_blank">mkflytning</a>
                 </div>
                 <div>
-                    <img src="email-icon.png" alt="Email">
+                    <img src="logoemail.png" alt="Email">
                     <a href="mailto:mkflytning@gmail.com">mkflytning@gmail.com</a>
                 </div>
             </div>
@@ -229,6 +244,11 @@
         </div>
         <p>© 2024 MK Flytning. Alle rettigheder forbeholdes.</p>
     </footer>
+
+    <!-- Notice Section -->
+    <div class="notice">
+        MK Flytning er i øjeblikket på pause. Du kan stadig anmode om et tilbud for at se priser. Vi sender din anmodning til vores aktive partnere. Hvis du allerede har været i kontakt med os og fået en eller anden form for hjælp, opfordrer vi dig til at skrive en anmeldelse på Google og andre platforme.
+    </div>
 
     <script>
         document.getElementById("contactButton").addEventListener("click", function() {

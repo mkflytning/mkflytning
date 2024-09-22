@@ -3,33 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privatlivspolitik - MK Flytning</title>
+    <title>privatlivpolitik - MK Flytning</title>
     <style>
-        body, html {
-            height: 100%;
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #000;
-            color: #ff9800;
-            text-align: center;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         h1 {
+            text-align: center;
+            color: #ff6600;
             font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ff6600;
+            margin-top: 20px;
+            font-size: 24px;
         }
 
         p {
-            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .arrow-container {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            margin: 20px 0;
+        }
+
+        .arrow-link {
+            text-decoration: none;
+            color: orange;
+            display: flex;
+            align-items: center;
+        }
+
+        .arrow-left {
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 25px solid orange;
+            transition: transform 0.3s ease;
+        }
+
+        .arrow-left:hover {
+            transform: scale(1.1);
+        }
+
+        .arrow-text {
+            margin-left: 10px;
+            font-size: 18px;
+            color: orange;
+        }
+
+        .arrow-container:hover .arrow {
+            transform: translateX(-5px);
+        }
+
+        .arrow-text {
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .social-icons img:hover {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Webstedet er i øjeblikket under vedligeholdelse</h1>
-        <p>Vi arbejder på at forbedre din oplevelse. Kom venligst tilbage senere.</p>
+    <div class="container">
+        <div class="arrow-container">
+            <a href="index.html" class="arrow-link">
+                <div class="arrow-left"></div>
+                <span class="arrow-text">Tilbage til forsiden</span>
+            </a>
+        </div>
+        
+        <h1>Privatlivspolitik for MK Flytning</h1>
+
+        <h2>1. Introduktion</h2>
+        <p>MK Flytning respekterer dit privatliv og er forpligtet til at beskytte dine personoplysninger. Denne politik beskriver, hvordan vi indsamler, bruger og beskytter dine data i overensstemmelse med den danske databeskyttelseslovgivning og GDPR.</p>
+
+        <h2>2. Hvilke oplysninger indsamler vi?</h2>
+        <p>Vi indsamler oplysninger, når du:</p>
+        <ul>
+            <li>Bestiller vores tjenester</li>
+            <li>Udfylder formularer på vores hjemmeside</li>
+            <li>Kommunikerer med os via e-mail eller telefon</li>
+        </ul>
+        <p>De oplysninger, vi indsamler, kan omfatte dit navn, adresse, telefonnummer og e-mailadresse.</p>
+
+        <h2>3. Hvordan bruger vi dine oplysninger?</h2>
+        <p>Vi bruger dine oplysninger til at:</p>
+        <ul>
+            <li>Tilvejebringe og administrere vores tjenester</li>
+            <li>Kommunikere med dig om din ordre og vores tjenester</li>
+            <li>Forbedre vores hjemmeside og tjenester</li>
+            <li>Overholde gældende lovgivning og reguleringer</li>
+        </ul>
+
+        <h2>4. Deling af oplysninger</h2>
+        <p>Vi sælger ikke dine personoplysninger til tredjepart. Vi kan dog dele oplysninger med:</p>
+        <ul>
+            <li>Betalingsudbydere for at behandle betalinger</li>
+            <li>Leverandører og samarbejdspartnere, der hjælper os med at levere vores tjenester</li>
+            <li>Offentlige myndigheder, hvis det kræves ved lov</li>
+        </ul>
+
+        <h2>5. Datasikkerhed</h2>
+        <p>Vi tager datasikkerhed alvorligt og har truffet passende tekniske og organisatoriske foranstaltninger for at beskytte dine personoplysninger mod uautoriseret adgang, brug eller offentliggørelse.</p>
+
+        <h2>6. Dine rettigheder</h2>
+        <p>Du har ret til at:</p>
+        <ul>
+            <li>Få adgang til de oplysninger, vi har om dig</li>
+            <li>Få rettet urigtige oplysninger</li>
+            <li>Få slettet dine oplysninger i visse tilfælde</li>
+            <li>Objektere mod behandling af dine oplysninger</li>
+            <li>Få dine oplysninger overført til en anden tjenesteudbyder</li>
+        </ul>
+        <p>For at udøve dine rettigheder kan du kontakte os via de oplysninger nedenfor.</p>
+
+        <h2>7. Ændringer til denne politik</h2>
+        <p>Vi forbeholder os retten til at ændre denne privatlivspolitik. Ændringer vil blive offentliggjort på vores hjemmeside. Vi anbefaler, at du regelmæssigt gennemgår denne politik for at være opdateret om, hvordan vi beskytter dine oplysninger.</p>
+
+        <h2>8. Kontakt os</h2>
+        <p>Hvis du har spørgsmål til denne privatlivspolitik eller vores databeskyttelsespraksis, er du velkommen til at kontakte os på:</p>
+        <p>Email: <a href="mailto:mkflytning@gmail.com">mkflytning@gmail.com</a></p>
+        <p>Telefon: +45 12 34 56 78</p>
+
+        <!-- Liens vers les réseaux sociaux -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61556330795183" target="_blank">
+                <img src="logoface.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/mkflytning" target="_blank">
+                <img src="logoinsta.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/mkflytning" target="_blank">
+                <img src="logolink.png" alt="LinkedIn">
+            </a>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 MK Flytning. Alle rettigheder forbeholdes.</p>
+    </footer>
 </body>
 </html>

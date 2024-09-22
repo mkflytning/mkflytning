@@ -37,6 +37,39 @@
             margin-bottom: 15px;
         }
 
+        .arrow-container {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            margin: 20px 0;
+        }
+
+        .arrow-link {
+            text-decoration: none;
+            color: orange;
+            display: flex;
+            align-items: center;
+        }
+
+        .arrow-left {
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 25px solid orange;
+            transition: transform 0.3s ease;
+        }
+
+        .arrow-left:hover {
+            transform: scale(1.1);
+        }
+
+        .arrow-text {
+            margin-left: 10px;
+            font-size: 18px;
+            color: orange;
+        }
+
         .social-icons {
             text-align: center;
             margin-top: 40px;
@@ -84,6 +117,13 @@
 </head>
 <body>
     <div class="container">
+        <div class="arrow-container">
+            <a href="index.html" class="arrow-link">
+                <div class="arrow-left"></div>
+                <span class="arrow-text">Tilbage til forsiden</span>
+            </a>
+        </div>
+
         <h1>Vilkår og Betingelser for MK Flytning</h1>
 
         <h2>1. Aftaleindgåelse</h2>
@@ -121,7 +161,6 @@
             Sidste ændring: 23. marts 2024
         </div>
 
-        <!-- Liens vers les réseaux sociaux -->
         <div class="social-icons">
             <a href="https://www.facebook.com/profile.php?id=61556330795183" target="_blank">
                 <img src="logoface.png" alt="Facebook">
@@ -133,10 +172,8 @@
                 <img src="logolink.png" alt="LinkedIn">
             </a>
         </div>
-
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 MK Flytning. Alle rettigheder forbeholdes.</p>
         <p>Kontakt os: <a href="mailto:mkflytning@gmail.com">mkflytning@gmail.com</a></p>
