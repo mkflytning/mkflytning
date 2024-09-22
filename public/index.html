@@ -8,71 +8,160 @@
         body, html {
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: white;
+            background-color: #121212;
         }
 
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
         .background {
-            background-image: url('background.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
             background-size: cover;
             background-position: center;
             height: 100%;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .logo {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 30px;
+            left: 30px;
         }
 
         .logo img {
-            width: 150px;
+            width: 160px;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+            opacity: 0.8; /* Logo plus transparent */
+            border-radius: 50%; /* Bords arrondis et plus doux */
         }
 
         .center-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         }
 
         .center-content button {
-            background-color: orange;
+            background-color: #ff9800;
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 15px 40px;
             font-size: 20px;
             margin: 20px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 30px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
         .center-content button:hover {
-            background-color: #ff9933;
+            background-color: #e67e22;
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .phone-number {
-            font-size: 24px;
-            color: orange;
+        .contact-options {
             display: none;
+            flex-direction: column;
+            align-items: center;
             margin-top: 20px;
         }
 
-        .phone-number a {
-            color: orange;
-            text-decoration: none;
+        .contact-options img {
+            width: 30px;
+            vertical-align: middle;
+            margin-right: 10px;
         }
 
-        .phone-number a:hover {
+        .contact-options a {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-options a:hover {
             text-decoration: underline;
         }
 
         .container {
             margin: 0 auto;
-            max-width: 800px;
+            max-width: 1200px;
             padding: 20px;
+            color: white;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .services .service {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            width: 250px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 15px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1b1b1b;
+            padding: 30px 20px;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        footer .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+        }
+
+        footer a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .footer-links {
+            margin-bottom: 10px;
+        }
+
+        footer .footer-links a {
+            margin-right: 15px;
         }
     </style>
 </head>
@@ -86,16 +175,64 @@
         <div class="center-content">
             <button id="contactButton">Kontakt os</button>
             <button onclick="window.location.href='/form.html';">Få et tilbud</button>
-            <div id="phoneSection" class="phone-number">
-                <img src="phone-icon.png" alt="Telefon">
-                <a href="tel:+4591833497">+45 91 83 34 97</a>
+            <div id="contactOptions" class="contact-options">
+                <div>
+                    <img src="logoface.png" alt="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61556330795183" target="_blank">mkflytning</a>
+                </div>
+                <div>
+                    <img src="email-icon.png" alt="Email">
+                    <a href="mailto:mkflytning@gmail.com">mkflytning@gmail.com</a>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Om os Section -->
+    <div class="section" id="about">
+        <h2>Om os</h2>
+        <p>MK Flytning er din pålidelige partner, når det kommer til flytteservice. Med års erfaring i branchen tilbyder vi hurtige, effektive og pålidelige løsninger til både privat- og erhvervskunder. Vores mål er at gøre din flytning så stressfri som muligt.</p>
+    </div>
+
+    <!-- Services Section -->
+    <div class="section" id="services">
+        <h2>Vores tjenester</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Privat flytning</h3>
+                <p>Vi tilbyder komplette løsninger for privatflytning, skræddersyet til dine behov.</p>
+            </div>
+            <div class="service">
+                <h3>Flytte rengøring</h3>
+                <p>Vi tilbyder professionel rengøring efter flytning, så din gamle bolig står klar til de nye ejere. Vores grundige team sørger for, at alle rum er pletfri og klar til overdragelse.</p>
+            </div>
+            <div class="service">
+                <h3>Opbevaring</h3>
+                <p>Sikker opbevaring af dine ejendele under flytningen eller i længere perioder.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <a href="privatpolitik.html">Privatlivspolitik</a>
+            <a href="vilkaar.html">Vilkår og betingelser</a>
+            <a href="#contact">Kontakt os</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61556330795183" target="_blank">
+                <img src="logoface.png" alt="Facebook"></a>
+            </a>
+            <a href="#"><img src="logoinsta.png" alt="Instagram"></a>
+            <a href="#"><img src="logolink.png" alt="LinkedIn"></a>
+        </div>
+        <p>© 2024 MK Flytning. Alle rettigheder forbeholdes.</p>
+    </footer>
+
     <script>
         document.getElementById("contactButton").addEventListener("click", function() {
-            document.getElementById("phoneSection").style.display = "block";
+            document.getElementById("contactOptions").style.display = "flex";
         });
     </script>
 

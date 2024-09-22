@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MK Flytning</title>
+    <title>MK Flytning - Få et tilbud</title>
     <style>
         body {
-            background-color: black;
+            background-color: #121212;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
         }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-top: 50px;
         }
 
         header {
@@ -26,26 +32,53 @@
 
         header img {
             width: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
         }
 
         h1 {
             text-align: center;
             color: orange;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: orange;
+            margin: 10px auto;
+            border-radius: 5px;
         }
 
         label {
             display: block;
             margin: 10px 0;
+            font-size: 16px;
+            color: #ffcc80;
         }
 
         input, select, textarea {
             width: 100%;
-            padding: 10px;
+            padding: 15px;
             margin: 10px 0;
             background-color: #333;
             color: white;
-            border: 1px solid orange;
-            border-radius: 5px;
+            border: 2px solid #ff9800;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #ffcc80;
         }
 
         button {
@@ -55,11 +88,64 @@
             padding: 15px;
             cursor: pointer;
             width: 100%;
-            border-radius: 5px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s;
         }
 
         button:hover {
             background-color: #ff9933;
+            transform: translateY(-3px);
+        }
+
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .checkbox-container label {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: #ccc;
+            margin-top: 40px;
+        }
+
+        footer .social-icons {
+            margin: 20px 0;
+        }
+
+        footer .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+            filter: invert(100%);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: orange;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -67,6 +153,7 @@
     <header>
         <img src="logo.png" alt="MK Flytning Logo">
     </header>
+    
     <div class="container">
         <h1>Få et tilbud på flytning</h1>
         <form action="/envoyer" method="POST">
@@ -87,9 +174,7 @@
 
             <label for="taille">Størrelse af lejlighed (m²)</label>
             <select id="taille" name="taille" required>
-                <!-- Liste déroulante pour la taille de 10 à 300 m² -->
                 <option value="" disabled selected>Vælg størrelse</option>
-                <!-- Générer des options de 10 à 300 m² -->
                 <script>
                     for (let i = 10; i <= 300; i += 10) {
                         document.write(`<option value="${i}">${i} m²</option>`);
@@ -106,8 +191,26 @@
             <label for="demenagement">Yderligere oplysninger</label>
             <textarea id="demenagement" name="demenagement" rows="4"></textarea>
 
+            <label>Vælg ekstra tjenester</label>
+            <div class="checkbox-container">
+                <label><input type="checkbox" name="services[]" value="rengøring"> Rengøring efter flytning</label>
+                <label><input type="checkbox" name="services[]" value="emballage"> Emballage af ejendele</label>
+                <label><input type="checkbox" name="services[]" value="deballage"> Udpakning af ejendele</label>
+                <label><input type="checkbox" name="services[]" value="carton"> Leje af flyttekasser</label>
+            </div>
+
             <button type="submit">Send forespørgsel</button>
         </form>
     </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61556330795183"><img src="logoface.png" alt="Facebook"></a>
+            <a href="#"><img src="logoinsta.png" alt="Instagram"></a>
+            <a href="#"><img src="logolink.png" alt="LinkedIn"></a>
+        </div>
+        <p>© 2024 MK Flytning. Alle rettigheder forbeholdes.</p>
+        <p><a href="privatpolitik.html">Privatlivspolitik</a> | <a href="vilkaar.html">Vilkår og betingelser</a></p>
+    </footer>
 </body>
 </html>
