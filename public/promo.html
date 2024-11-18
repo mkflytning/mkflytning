@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Flytning - Kampagne 30% rabat</title>
+    <style>
+        .back-button {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button img {
+            width: 60px;
+            height: auto;
+        }
+
+        .back-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-top: 50px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header img {
+            width: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgba(255, 115, 0, 0.993);
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: orange;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .price-plan {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .price-plan:hover {
+            transform: translateY(-5px);
+        }
+
+        .price-plan h2 {
+            color: #ffcc80;
+            font-size: 28px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #f44336;
+            font-size: 20px;
+        }
+
+        .new-price {
+            color: #4caf50;
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        button {
+            background-color: rgba(255, 115, 0, 0.993);
+            color: black;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #ff9933;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            color: #ccc;
+            margin-top: 40px;
+        }
+
+        footer .social-icons {
+            margin: 20px 0;
+        }
+
+        footer .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+            filter: invert(100%);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: orange;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="window.location.href='index.html';">
+            <img src="logo.png" alt="MK Flytning">
+            <a href="index.html" class="back-button">
+                <img src="back-arrow.png" alt="tilbage"/>
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Vores 30% rabat kampagne</h1>
+        
+        <div class="price-plan" onclick="window.location.href='form.html?services=30% rabat, kampucha24&plan=1'">
+            <h2>Plan 1</h2>
+            <p class="old-price">1681 kr</p>
+            <p class="new-price">1176,7 kr per time</p>
+            <p>1 Lastbil og op til 3 flyttemænd</p>
+        </div>
+
+        <div class="price-plan" onclick="window.location.href='form.html?services=30% rabat, kampucha24&plan=2'">
+            <h2>Plan 2</h2>
+            <p class="old-price">1550 kr</p>
+            <p class="new-price">1085 kr per time</p>
+            <p>1 Lastbil og op til 2 flyttemænd</p>
+        </div>
+
+        <div class="price-plan" onclick="window.location.href='form.html?services=30% rabat, kampucha24&plan=3'">
+            <h2>Plan 3</h2>
+            <p class="old-price">Faste priser</p>
+            <p class="new-price">30% rabat</p>
+            <p>Faste priser på flytningstjenester</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61556330795183"><img src="logoface.png" alt="Facebook"></a>
+            <a href="#"><img src="logoinsta.png" alt="Instagram"></a>
+            <a href="#"><img src="logolink.png" alt="LinkedIn"></a>
+        </div>
+        <p>© 2024 MK Flytning. Alle rettigheder forbeholdes.</p>
+        <p><a href="privatpolitik.html">Privatlivspolitik</a> | <a href="vilkaar.html">Vilkår og betingelser</a></p>
+    </footer>
+</body>
+</html>
