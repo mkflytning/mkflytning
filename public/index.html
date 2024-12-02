@@ -208,7 +208,7 @@
             position: absolute;
             top: 257px;
             left: 20px;
-            background-color: #ff6600; /* Couleur orange */
+            background-color: #f6600f; /* Couleur orange */
             color: black; /* Texte en noir */
             padding: 15px;
             border-radius: 8px;
@@ -217,7 +217,15 @@
             max-width: 300px; /* Largeur maximale */
             font-size: 14px; /* Taille de police */
         }
-       
+        /* Ajustement pour les écrans de taille plus petite (par exemple les téléphones) */
+@media (max-width: 768px) {
+    .notice {
+        left: 05px; /* Réduire l'espace gauche */
+        max-width: 90%; /* Largeur de la notice réduite */
+        font-size: 12px; /* Taille de police plus petite */
+        top: 662px; /* Ajuster la position de la notice si nécessaire */
+    }
+}
     </style>
 </head>
 <body>
@@ -227,12 +235,12 @@
         </div>
         <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <div id="dropdownMenu" class="dropdown-menu">
-            <a href="about">Om os</a>
+            <a href="about.html">Om os</a>
             <a href="form.html">gratis tilbud</a>
             <a href="#services">Vores tjenester</a>
             <a href="/promo.html">Kampagner</a>
             <a href="/reclam.html">Reklamationer</a>
-            <a href="contact">Kontakt os</a>
+            <a href="/contact.html">Kontakt os</a>
         </div>
         <div class="center-content">
             <button id="contactButton">Kontakt os</button>
@@ -247,7 +255,7 @@
                     <a href="mailto:mkflytning@gmail.com">mkflytning@gmail.com</a>
                 </div>
                 <div>
-                    <a href="tel:+4512345678">
+                    <a href="tel:+4566778825">
                         <img src="phone.png" alt="Telefon" style="width: 40px; margin-right: 10px;">
                         <span>+45 66 77 88 25</span>
                     </a>
@@ -309,7 +317,9 @@
     <strong>Velkommen til MK Flytning!</strong><br><br>
      <em>At hente et tilbud er helt gratis, men det betyder ikke, at vi har en aftale.<br>
      For at bekræfte og sikre en aftale, skal der ske en direkte bestilling.<br><br>
-      Ønsker du at bestille til fast pris eller timepris? Angiv det blot under "Yderligere oplysninger" ved at tryk ''få et tilbud'' eller ring til os på
+      Ønsker du at bestille til fast pris eller timepris? Angiv det blot under "Yderligere oplysninger" ved at tryk 
+      <a href="form.html">''få et tilbud''</a>
+ eller ring til os på
       <a href="tel:+4566778825">+45 66 77 88 25</a>.</em>
 </div>
       
