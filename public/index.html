@@ -205,9 +205,9 @@
 
         /* Notice Style */
         .notice {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
+            position: absolute;
+            top: 257px;
+            left: 20px;
             background-color: #ff6600; /* Couleur orange */
             color: black; /* Texte en noir */
             padding: 15px;
@@ -217,6 +217,7 @@
             max-width: 300px; /* Largeur maximale */
             font-size: 14px; /* Taille de police */
         }
+       
     </style>
 </head>
 <body>
@@ -233,7 +234,7 @@
             <a href="/reclam.html">Reklamationer</a>
             <a href="contact">Kontakt os</a>
         </div>
-         <div class="center-content">
+        <div class="center-content">
             <button id="contactButton">Kontakt os</button>
             <button onclick="window.location.href='/form.html';">Få et tilbud</button>
             <div id="contactOptions" class="contact-options">
@@ -245,92 +246,99 @@
                     <img src="logoemail.png" alt="Email">
                     <a href="mailto:mkflytning@gmail.com">mkflytning@gmail.com</a>
                 </div>
-            <div> 
-                <img src="phone.png" alt="Telefon">
-                <span>+45 12 34 56 78</span>
-           
+                <div>
+                    <a href="tel:+4512345678">
+                        <img src="phone.png" alt="Telefon" style="width: 40px; margin-right: 10px;">
+                        <span>+45 66 77 88 25</span>
+                    </a>
+                </div>
             </div>
-        </div>
-            <!-- Nouveaux boutons ajoutés -->
+        <div>
+        <!-- Nouveaux boutons ajoutés -->
             
-            <button onclick="window.location.href='/promo.html';">kampagner</button>
-            <button onclick="window.location.href='/reclam.html';">Reklamationer</button>
-            
-        </div>
-    </div>
+          <button onclick="window.location.href='/promo.html';">kampagner</button>
+          <button onclick="window.location.href='/reclam.html';">Reklamationer</button>
+        </div>  
+      </div>
+  </div>
 
-    <!-- Om os Section -->
-    <div class="section" id="about">
-        <h2>Om os</h2>
-        <p>MK Flytning er din pålidelige partner, når det kommer til flytteservice. Med års erfaring i branchen tilbyder vi hurtige, effektive og pålidelige løsninger til både privat- og erhvervskunder. Vores mål er at gøre din flytning så stressfri som muligt.</p>
-    </div>
+  <!-- Om os Section -->
+  <div class="section" id="about">
+      <h2>Om os</h2>
+      <p>MK Flytning er din pålidelige partner, når det kommer til flytteservice. Med års erfaring i branchen tilbyder vi hurtige, effektive og pålidelige løsninger til både privat- og erhvervskunder. Vores mål er at gøre din flytning så stressfri som muligt.</p>
+  </div>
 
-    <!-- Services Section -->
-    <div class="section" id="services">
-        <h2>Vores tjenester</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Privat flytning</h3>
-                <p>Vi tilbyder komplette løsninger for privatflytning, skræddersyet til dine behov.</p>
-            </div>
-            <div class="service">
-                <h3>Flytte rengøring</h3>
-                <p>Vi tilbyder professionel rengøring efter flytning, så din gamle bolig står klar til de nye ejere. Vores grundige team sørger for, at alle rum er pletfri og klar til overdragelse.</p>
-            </div>
-            <div class="service">
-                <h3>Opbevaring</h3>
-                <p>Sikker opbevaring af dine ejendele under flytningen eller i længere perioder.</p>
-            </div>
-        </div>
-    </div>
+  <!-- Services Section -->
+  <div class="section" id="services">
+      <h2>Vores tjenester</h2>
+      <div class="services">
+          <div class="service">
+              <h3>Privat flytning</h3>
+              <p>Vi tilbyder komplette løsninger for privatflytning, skræddersyet til dine behov.</p>
+          </div>
+          <div class="service">
+              <h3>Flytte rengøring</h3>
+              <p>Vi tilbyder professionel rengøring efter flytning, så din gamle bolig står klar til de nye ejere. Vores grundige team sørger for, at alle rum er pletfri og klar til overdragelse.</p>
+          </div>
+          <div class="service">
+              <h3>Opbevaring</h3>
+              <p>Sikker opbevaring af dine ejendele under flytningen eller i længere perioder.</p>
+          </div>
+      </div>
+  </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-links">
-            <a href="privatpolitik.html">Privatlivspolitik</a>
-            <a href="vilkaar.html">Vilkår og betingelser</a>
-            <a href="#contact">Kontakt os</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61556330795183" target="_blank">
-                <img src="logoface.png" alt="Facebook"></a>
-            </a>
-            <a href="#"><img src="logoinsta.png" alt="Instagram"></a>
-            <a href="#"><img src="logolink.png" alt="LinkedIn"></a>
-        </div>
-        <p>© 2024 MK Flytning. Alle rettigheder forbeholdes.</p>
-    </footer>
+  <!-- Footer Section -->
+  <footer>
+      <div class="footer-links">
+          <a href="privatpolitik.html">Privatlivspolitik</a>
+          <a href="vilkaar.html">Vilkår og betingelser</a>
+          <a href="#contact">Kontakt os</a>
+      </div>
+      <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61556330795183" target="_blank">
+              <img src="logoface.png" alt="Facebook"></a>
+          </a>
+          <a href="#"><img src="logoinsta.png" alt="Instagram"></a>
+          <a href="#"><img src="logolink.png" alt="LinkedIn"></a>
+      </div>
+      <p>© 2024 MK Flytning. Alle rettigheder forbeholdes.</p>
+  </footer>
 
-    <!-- Notice Section -->
-    <div class="notice">
-        MK Flytning er i øjeblikket på pause. Du kan stadig anmode om et tilbud for at se priser. Vi sender din anmodning til vores aktive partnere. Hvis du allerede har været i kontakt med os og fået en eller anden form for hjælp, opfordrer vi dig til at skrive en anmeldelse på Google og andre platforme.
-    </div>
+  <!-- Notice Section -->
+  <div class="notice">
+    <strong>Velkommen til MK Flytning!</strong><br><br>
+     <em>At hente et tilbud er helt gratis, men det betyder ikke, at vi har en aftale.<br>
+     For at bekræfte og sikre en aftale, skal der ske en direkte bestilling.<br><br>
+      Ønsker du at bestille til fast pris eller timepris? Angiv det blot under "Yderligere oplysninger" ved at tryk ''få et tilbud'' eller ring til os på
+      <a href="tel:+4566778825">+45 66 77 88 25</a>.</em>
+</div>
+      
 
-    <script>
-        document.addEventListener('click', function(event) {
-            const isMenuButton = event.target.classList.contains('menu-button');
-            const isDropdownMenu = document.getElementById('dropdownMenu').contains(event.target);
-            const isContactButton = event.target.id === 'contactButton';
-            const isContactOptions = document.getElementById('contactOptions').contains(event.target);
+  <script>
+      document.addEventListener('click', function(event) {
+          const isMenuButton = event.target.classList.contains('menu-button');
+          const isDropdownMenu = document.getElementById('dropdownMenu').contains(event.target);
+          const isContactButton = event.target.id === 'contactButton';
+          const isContactOptions = document.getElementById('contactOptions').contains(event.target);
 
-            if (!isMenuButton && !isDropdownMenu) {
-                document.getElementById('dropdownMenu').style.display = 'none';
-            }
+          if (!isMenuButton && !isDropdownMenu) {
+              document.getElementById('dropdownMenu').style.display = 'none';
+          }
 
-            if (!isContactButton && !isContactOptions) {
-                document.getElementById('contactOptions').style.display = 'none';
-            }
-        });
+          if (!isContactButton && !isContactOptions) {
+              document.getElementById('contactOptions').style.display = 'none';
+          }
+      });
 
-        function toggleMenu() {
-            const menu = document.getElementById('dropdownMenu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-        }
+      function toggleMenu() {
+          const menu = document.getElementById('dropdownMenu');
+          menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
 
-        document.getElementById('contactButton').addEventListener('click', function() {
-            const contactOptions = document.getElementById('contactOptions');
-            contactOptions.style.display = contactOptions.style.display === 'none' ? 'flex' : 'none';
-        });
-    </script>
+      document.getElementById('contactButton').addEventListener('click', function() {
+          const contactOptions = document.getElementById('contactOptions');
+          contactOptions.style.display = contactOptions.style.display === 'none' ? 'flex' : 'none';
+      });
+  </script>
 </body>
 </html>
