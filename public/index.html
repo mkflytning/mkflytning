@@ -26,7 +26,6 @@
             align-items: center;
             justify-content: center;
         }
-
         .logo {
             position: absolute;
             top: 30px;
@@ -38,6 +37,11 @@
             filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
             opacity: 0.8; /* Logo plus transparent */
             border-radius: 50%; /* Bords arrondis et plus doux */
+            .logo {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
         }
         .menu-button {
             position: absolute;
@@ -238,13 +242,13 @@
             <a href="about.html">Om os</a>
             <a href="form.html">gratis tilbud</a>
             <a href="#services">Vores tjenester</a>
-            <a href="/promo.html">Kampagner</a>
+            <a href="/pris.html">priser</a>
             <a href="/reclam.html">Reklamationer</a>
             <a href="/contact.html">Kontakt os</a>
         </div>
         <div class="center-content">
-            <button id="contactButton">Kontakt os</button>
-            <button onclick="window.location.href='/form.html';">Få et tilbud</button>
+            <button id="contactButton"><em>Kontakt os</em></button>
+            <button onclick="window.location.href='/form.html';"><em>Få et tilbud</em></button>
             <div id="contactOptions" class="contact-options">
                 <div>
                     <img src="logoface.png" alt="Facebook">
@@ -263,12 +267,13 @@
             </div>
         <div>
         <!-- Nouveaux boutons ajoutés -->
-            
-          <button onclick="window.location.href='/promo.html';">kampagner</button>
-          <button onclick="window.location.href='/reclam.html';">Reklamationer</button>
+          <button onclick="window.location.href='/nos.html';"><em>vores tjenester</em></button> 
+          <button onclick="window.location.href='/pris.html';"><em>priser</em></button>
+          <button onclick="window.location.href='/reclam.html';"><em>Reklamationer</em></button>
         </div>  
       </div>
   </div>
+
 
   <!-- Om os Section -->
   <div class="section" id="about">
@@ -278,7 +283,7 @@
 
   <!-- Services Section -->
   <div class="section" id="services">
-      <h2>Vores tjenester</h2>
+      <h2>Hvad Tilbyder vi</h2>
       <div class="services">
           <div class="service">
               <h3>Privat flytning</h3>

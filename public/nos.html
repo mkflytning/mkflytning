@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vores Services - MK Flytning</title>
+  <style>
+    /* Style global */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f4f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #f6600f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+    }
+
+    .services {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2em;
+      color: #010003;
+      margin-bottom: 20px;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 80%;
+      max-width: 200px;
+      margin: 0 auto 40px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto ;
+      
+    }
+
+    .service-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .service-item {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: scale(1.05);
+    }
+
+    .service-item h3 {
+      color: #004aad;
+      font-size: 1.2em;
+    }
+
+    .service-item p {
+      font-size: 1em;
+      color: #555;
+    }
+
+    footer {
+      background-color: #f85002;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Velkommen til MK Flytning</h1>
+    <p>Se vores tjenester for at gøre din flytning nem og problemfri!</p>
+  </header>
+
+  <main>
+    <section class="services">
+      <h2>Vores Tjenester</h2>
+
+      <!-- Slider med billeder -->
+      <div class="slider-container">
+        <div class="slider" id="slider">
+          <img src="service1.jpg" alt="Montage og demontage af møbler">
+          <img src="service2.jpg" alt="Transport af flyttelæs">
+          <img src="service3.jpg" alt="Bortskaffelse af møbler">
+          <img src="service4.jpg" alt="Affald fra flytning">
+          <img src="service5.jpg" alt="Reparationer">
+        </div>
+      </div>
+
+      <!-- Liste over tjenester -->
+      <div class="service-list">
+        <div class="service-item">
+          <h3><em>Montering og afmontering af møbler</em></h3>
+          <p><em>Vi tager os af dine møbler med omhu. <br> <br> <strong>Afmontering:</strong> Skånsom adskillelse af møbler som skabe, senge, reoler og borde, så de er nemme at transportere.
+           <strong>Montering:</strong> Professionel samling af møbler på din nye adresse, så alt står solidt og korrekt. <br> <br> 
+           <strong>Omhu og sikkerhed: </strong> Vi håndterer dine møbler med stor forsigtighed og sikrer, at de ikke tager skade under flytningen. <br> <br>
+              Lad os klare det praktiske, så du slipper for besværet.</p>
+        </div>
+        <div class="service-item">
+          <h3>Transport af flyttelæs</h3>
+          <p>Sikker transport af dine ejendele.</p>
+        </div>
+        <div class="service-item">
+          <h3>Bortskaffelse af møbler</h3>
+          <p>Vi hjælper med at fjerne gamle møbler.</p>
+        </div>
+        <div class="service-item">
+          <h3>Affald fra flytning</h3>
+          <p>Vi tager os af alt flytteaffald.</p>
+        </div>
+        <div class="service-item">
+          <h3>Reparationer</h3>
+          <p>Vi tilbyder hjælp til småreparationer, så du kan efterlade boligen i perfekt stand. <br> Vores services omfatter: <br>
+
+            <strong>Fyldning af huller i vægge:</strong>  Spartling og klargøring af vægge efter nedtagning af billeder, hylder eller tv-beslag. <br>
+           <strong>Udskiftning af lister eller små dele:</strong>  Reparation eller udskiftning af beskadigede fodlister, stikkontakt-dæksler eller andre mindre elementer. <br>
+           <strong>Justering af døre og skuffer:</strong> Sørger for, at alt fungerer korrekt inden overdragelse. <br>
+            <strong>Let malerarbejde:</strong> Retouchering af vægge og lofter, hvor det er nødvendigt. <br>
+            Vi tager os af de små detaljer, så du kan fokusere på din flytning. <br> <br> Kontakt os for at høre, hvordan vi kan hjælpe dig med at klare reparationerne hurtigt og effektivt!</em></p>
+        </div>
+        <div class="service-item">
+          <h3><em>Rengøring</h3>
+          <p>Vi klarer alt i rengøring efter flytning. <br> vi tilbyder professionel rengøring, der sikrer, at boligen er helt klar til den næste beboer. Vores service inkluderer grundig rengøring af alle rum, herunder: <br>
+            
+           <strong>Køkkenet:</strong>  Afvaskning af skabe, skuffer, hvidevarer, emhætte og overflader. <br>
+           <strong>Badeværelset:</strong>  Rensning af fliser, afkalkning af armaturer og grundig desinficering. <br>
+           <strong>Væreslser:</strong> Støvsugning, gulvvask, aftørring af paneler, vindueskarme og stikkontakter. <br><br>
+            <strong>Vinduespudsning:</strong> Indvendig og udvendig vinduespolering, så alt fremstår rent og indbydende. <br>
+            Vi skræddersyr rengøringen efter dine behov, og vores erfarne team sørger for, at intet bliver overset. <br> Kontakt os i dag for et uforpligtende tilbud!</em></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 MK Flytning. Alle rettigheder forbeholdes.</p>
+  </footer>
+
+  <script>
+    // JavaScript til slider
+    const slider = document.getElementById('slider');
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % 5; // Skift mellem 5 billeder
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000); // Skift hvert 3. sekund
+  </script>
+</body>
+</html>
